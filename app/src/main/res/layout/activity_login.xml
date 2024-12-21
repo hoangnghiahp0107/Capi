@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/cabiba"
+    tools:context=".LoginActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="220dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đăng nhập"
+            android:textSize="30dp"
+            android:textColor="@color/green"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold">
+        </TextView>
+        <EditText
+            android:id="@+id/edtAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tên đăng nhập"
+            android:inputType="text"
+            android:importantForAccessibility="no"
+            android:background="@drawable/rounded_input"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:padding="15dp">
+        </EditText>
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mật khẩu"
+            android:inputType="textPassword"
+            android:importantForAccessibility="no"
+            android:background="@drawable/rounded_input"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:padding="15dp">
+        </EditText>
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:text="Đăng nhập"
+            android:inputType="text"
+            android:gravity="center"
+            android:backgroundTint="@color/darkgreen"
+            android:importantForAccessibility="no"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:textColor="@color/white"
+            android:padding="15dp"
+            android:textSize="17dp"
+            android:layout_marginBottom="40dp"
+            android:textStyle="bold">
+        </Button>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quên mật khẩu"
+            android:textSize="15sp"
+            android:textColor="@color/textgreen"
+            android:textStyle="bold">
+        </TextView>
+        <TextView
+            android:id="@+id/txSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đăng ký"
+            android:textSize="15sp"
+            android:textColor="@color/textgreen"
+            android:layout_marginTop="5dp">
+        </TextView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,5 @@
+<!-- res/drawable/rounded_corners.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/light" /> <!-- Màu nền của LinearLayout -->
+    <corners android:radius="25dp" /> <!-- Độ cong của góc -->
+</shape>
