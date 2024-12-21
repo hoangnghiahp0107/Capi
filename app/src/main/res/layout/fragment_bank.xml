@@ -10,21 +10,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginTop="80dp"
         android:layout_gravity="center">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="50dp"
             android:gravity="center">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corners5"
+                android:padding="1dp"
                 android:src="@drawable/nganhang">
             </ImageView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:background="@drawable/rounded_corners3"
+                android:textColor="@color/green"
+                android:textStyle="bold"
                 android:text="Chuyển khoản ngân hàng">
             </TextView>
         </LinearLayout>
@@ -32,16 +40,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="50dp"
             android:gravity="center">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:background="@drawable/rounded_corners5"
                 android:src="@drawable/card">
             </ImageView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:background="@drawable/rounded_corners3"
+                android:textColor="@color/green"
+                android:textStyle="bold"
                 android:text="Liên kết thẻ ngân hàng">
             </TextView>
         </LinearLayout>
@@ -49,6 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:layout_marginTop="50dp"
             android:orientation="horizontal">
             <ImageView
                 android:layout_width="50dp"
@@ -58,7 +74,11 @@
             <TextView
                 android:layout_marginLeft="5dp"
                 android:layout_width="wrap_content"
+                android:padding="5dp"
                 android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                android:background="@drawable/rounded_corners3"
+                android:textStyle="bold"
                 android:text="Chuyển tiền qua Momo">
             </TextView>
         </LinearLayout>
@@ -66,6 +86,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:layout_marginTop="50dp"
             android:orientation="horizontal">
             <ImageView
                 android:layout_width="50dp"
@@ -74,6 +95,10 @@
             </ImageView>
             <TextView
                 android:layout_marginLeft="5dp"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:background="@drawable/rounded_corners3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chuyển tiền qua ZaloPay">
