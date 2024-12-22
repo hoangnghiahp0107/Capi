@@ -3,10 +3,12 @@ package com.example.capi;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +25,7 @@ public class BankFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private LinearLayout atm, lienket, momo, zalopay;
 
     public BankFragment() {
         // Required empty public constructor
@@ -59,6 +62,83 @@ public class BankFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bank, container, false);
+        View view =  inflater.inflate(R.layout.fragment_bank, container, false);
+        atm = view.findViewById(R.id.atm);
+        lienket = view.findViewById(R.id.lienket);
+        momo = view.findViewById(R.id.momo);
+        zalopay = view.findViewById(R.id.zalopay);
+        AddEvent(view);
+        return view;
+    }
+    private void AddEvent(View view) {
+        // Giả sử datlich là đối tượng Button đã được khởi tạo đúng
+        atm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Tạo fragment BookingFragment mới
+                RoomFragment roomFragment = new RoomFragment();
+
+                // Chuyển dữ liệu từ fragment hiện tại sang BookingFragment
+                Bundle args = new Bundle();
+                roomFragment.setArguments(args);  // Gán arguments vào fragment mới
+
+                // Thực hiện chuyển fragment
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.main_frame, roomFragment);  // Thay thế fragment trong layout
+                transaction.addToBackStack(null);  // Thêm vào back stack để có thể quay lại
+                transaction.commit();  // Xác nhận thay đổi
+            }
+        });
+        lienket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Tạo fragment BookingFragment mới
+                RoomFragment roomFragment = new RoomFragment();
+
+                // Chuyển dữ liệu từ fragment hiện tại sang BookingFragment
+                Bundle args = new Bundle();
+                roomFragment.setArguments(args);  // Gán arguments vào fragment mới
+
+                // Thực hiện chuyển fragment
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.main_frame, roomFragment);  // Thay thế fragment trong layout
+                transaction.addToBackStack(null);  // Thêm vào back stack để có thể quay lại
+                transaction.commit();  // Xác nhận thay đổi
+            }
+        });
+        momo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Tạo fragment BookingFragment mới
+                RoomFragment roomFragment = new RoomFragment();
+
+                // Chuyển dữ liệu từ fragment hiện tại sang BookingFragment
+                Bundle args = new Bundle();
+                roomFragment.setArguments(args);  // Gán arguments vào fragment mới
+
+                // Thực hiện chuyển fragment
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.main_frame, roomFragment);  // Thay thế fragment trong layout
+                transaction.addToBackStack(null);  // Thêm vào back stack để có thể quay lại
+                transaction.commit();  // Xác nhận thay đổi
+            }
+        });
+        zalopay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Tạo fragment BookingFragment mới
+                RoomFragment roomFragment = new RoomFragment();
+
+                // Chuyển dữ liệu từ fragment hiện tại sang BookingFragment
+                Bundle args = new Bundle();
+                roomFragment.setArguments(args);  // Gán arguments vào fragment mới
+
+                // Thực hiện chuyển fragment
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.main_frame, roomFragment);  // Thay thế fragment trong layout
+                transaction.addToBackStack(null);  // Thêm vào back stack để có thể quay lại
+                transaction.commit();  // Xác nhận thay đổi
+            }
+        });
     }
 }

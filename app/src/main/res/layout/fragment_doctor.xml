@@ -96,6 +96,7 @@
                         </LinearLayout>
                     </LinearLayout>
                     <Button
+                        android:id="@+id/datlich"
                         android:layout_marginLeft="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -171,6 +172,7 @@
                     </LinearLayout>
                     <Button
                         android:layout_marginLeft="10dp"
+                        android:id="@+id/datlich2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Đặt lịch gọi"
@@ -245,6 +247,7 @@
                     </LinearLayout>
                     <Button
                         android:layout_marginLeft="10dp"
+                        android:id="@+id/datlich3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Đặt lịch gọi"

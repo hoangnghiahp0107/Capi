@@ -13,6 +13,7 @@
         android:layout_marginTop="80dp"
         android:layout_gravity="center">
         <LinearLayout
+            android:id="@+id/atm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -22,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounded_corners5"
-                android:padding="1dp"
+                android:padding="2dp"
                 android:src="@drawable/nganhang">
             </ImageView>
             <TextView
@@ -41,11 +42,12 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="50dp"
+            android:id="@+id/lienket"
             android:gravity="center">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="1dp"
+                android:padding="2dp"
                 android:background="@drawable/rounded_corners5"
                 android:src="@drawable/card">
             </ImageView>
@@ -65,6 +67,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginTop="50dp"
+            android:id="@+id/momo"
             android:orientation="horizontal">
             <ImageView
                 android:layout_width="50dp"
@@ -87,6 +90,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginTop="50dp"
+            android:id="@+id/zalopay"
             android:orientation="horizontal">
             <ImageView
                 android:layout_width="50dp"

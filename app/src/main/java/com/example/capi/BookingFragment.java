@@ -1,7 +1,6 @@
 package com.example.capi;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -12,10 +11,11 @@ import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link DoctorFragment#newInstance} factory method to
+ * Use the {@link BookingFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
  */
-public class DoctorFragment extends Fragment {
+public class BookingFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -25,10 +25,8 @@ public class DoctorFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private Button datlich, datlich2, datlich3;
-    public DoctorFragment() {
-        // Required empty public constructor
-    }
+
+    private Button chonthoigian;
 
     /**
      * Use this factory method to create a new instance of
@@ -36,16 +34,20 @@ public class DoctorFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment DoctorFragment.
+     * @return A new instance of fragment BookingFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static DoctorFragment newInstance(String param1, String param2) {
-        DoctorFragment fragment = new DoctorFragment();
+    public static BookingFragment newInstance(String param1, String param2) {
+        BookingFragment fragment = new BookingFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+    }
+
+    public BookingFragment() {
+        // Required empty public constructor
     }
 
     @Override
@@ -61,31 +63,30 @@ public class DoctorFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_doctor, container, false);
-        datlich = view.findViewById(R.id.datlich);
+        View view = inflater.inflate(R.layout.fragment_booking, container, false);
+        chonthoigian = view.findViewById(R.id.chonthoigian);
         AddEvent(view);
         return view;
     }
 
     private void AddEvent(View view) {
         // Giả sử datlich là đối tượng Button đã được khởi tạo đúng
-        datlich.setOnClickListener(new View.OnClickListener() {
+        chonthoigian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Tạo fragment BookingFragment mới
-                BookingFragment bookingFragment = new BookingFragment();
+                BankFragment bankFragment = new BankFragment();
 
                 // Chuyển dữ liệu từ fragment hiện tại sang BookingFragment
                 Bundle args = new Bundle();
-                bookingFragment.setArguments(args);  // Gán arguments vào fragment mới
+                bankFragment.setArguments(args);  // Gán arguments vào fragment mới
 
                 // Thực hiện chuyển fragment
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.main_frame, bookingFragment);  // Thay thế fragment trong layout
+                transaction.replace(R.id.main_frame, bankFragment);  // Thay thế fragment trong layout
                 transaction.addToBackStack(null);  // Thêm vào back stack để có thể quay lại
                 transaction.commit();  // Xác nhận thay đổi
             }
         });
     }
-
 }
